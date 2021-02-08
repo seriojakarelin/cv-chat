@@ -1,0 +1,67 @@
+.input {
+    width: 100%;
+    display: flex;
+    padding: 10px 0 15px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.input__options-container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.input__form {
+    width: 70%;
+}
+
+.input__input {
+    width: 100%;
+    height: 70px;
+    border-radius: 50px;
+    padding: 0 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: 1px solid #d3d3d3;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input__option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    border: 1px solid #d3d3d3;
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin: 0 20px 0 0;
+}
+
+.input__option:last-child {
+    margin: 0;
+}
+
+.input__option_type_education {
+    background-image: url(../../images/student.svg);
+}
+
+.input__option_type_experience {
+    background-image: url(../../images/cup.svg);
+}
+
+.input__option_type_hobby {
+    background-image: url(../../images/guitar.svg);
+}
+
+.input__option_type_contacts {
+    background-image: url(../../images/mail.svg);
+}
