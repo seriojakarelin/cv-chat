@@ -1,11 +1,14 @@
 .input {
     width: 100%;
+    max-width: 800px;
     display: flex;
-    padding: 10px 0 15px;
+    padding: 10px 10px 15px;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     bottom: 0;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 .input__options-container {
@@ -13,17 +16,20 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    justify-content: space-between;
 }
 
 .input__form {
     width: 70%;
+    position: relative;
+    margin: 0 10px;
 }
 
 .input__input {
     width: 100%;
     height: 70px;
     border-radius: 50px;
-    padding: 0 15px 0;
+    padding: 0 60px 0 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     border: 1px solid #d3d3d3;
@@ -32,22 +38,41 @@
 }
 
 .input__option {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-style: normal;
     border: 1px solid #d3d3d3;
     background-position: center;
-    background-size: 85%;
+    background-size: 75%;
     background-repeat: no-repeat;
     width: 70px;
     height: 70px;
     box-sizing: border-box;
     border-radius: 100%;
-    margin: 0 20px 0 0;
+    margin: 0 10px 0 0;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0;
+    transition: transform .3s linear;
 }
 
-.input__option:last-child {
+.input__submit-button {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 0 20px 0 0;
+    background-color: #fff;
+    background-image: url(../../images/arrow.png);
+    padding: 0;
     margin: 0;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    transform: rotate(.25turn);
+    transition: transform .3s linear;
 }
 
 .input__option_type_education {
@@ -56,6 +81,7 @@
 
 .input__option_type_experience {
     background-image: url(../../images/cup.svg);
+    margin: 0;
 }
 
 .input__option_type_hobby {
@@ -64,4 +90,51 @@
 
 .input__option_type_contacts {
     background-image: url(../../images/mail.svg);
+    margin: 0;
+}
+
+.input__submit-button:hover {
+    transform: rotate(.25turn) scale(.85);
+}
+
+.input__option:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 620px) {
+
+    .input {
+        justify-content: space-between;
+        padding: 10px 5px 15px;
+    }
+
+    .input__option {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px 0 0;
+    }
+
+    .input__form {
+        width: 60%;
+        margin: 0 5px;
+    }
+
+    .input__input {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 42px 0 15px;
+    }
+
+    .input__option_type_experience {
+        margin: 0;
+    }
+    
+    .input__option_type_contacts {
+        margin: 0;
+    }
+
+    .input__submit-button {
+        width: 30px;
+        height: 30px;
+    }
 }
